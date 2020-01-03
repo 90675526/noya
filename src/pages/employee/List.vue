@@ -14,7 +14,7 @@
       <el-table-column fixed="right" label="操作">
         <template v-slot="slot">
           <a href="" @click.prevent="toDeleteHandler(slot.row.id)">删除</a>
-          <a href="" @click.prevent="toUpdateHandler(slot.row)">修改</a>
+          <a href="" @click.prevent="toUpdateHandler(slot.row)">{{ slot.vue }}修改</a>
         </template>
       </el-table-column>
     </el-table>
@@ -141,7 +141,7 @@ export default {
     },
     toAddHandler() {
       this.form = {
-        type: 'waiter'
+        type: 'employee'
       }
       this.title = '录入员工信息'
       this.visible = true

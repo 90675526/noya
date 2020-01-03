@@ -128,9 +128,9 @@ export default {
       })
     },
     toUpdateHandler(row) {
+      this.title = '修改顾客信息'
       this.form = row
       this.visible = true
-      this.title = '修改员工信息'
     },
     toAddHandler() {
       this.form = {
